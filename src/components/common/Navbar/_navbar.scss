@@ -1,0 +1,24 @@
+.nav {
+    padding: 16px;
+    z-index: 3;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 0px 16px;
+    display: flex;
+    justify-content: space-between;
+    span {
+        font-weight: 700;
+    }
+    a {
+        display: flex;
+        gap:4px;
+        align-items: center;
+        text-decoration: none;
+        color: #002366;
+    }
+    div{
+        cursor: pointer;
+    }
+}
+

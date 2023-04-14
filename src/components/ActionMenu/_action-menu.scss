@@ -1,0 +1,44 @@
+.action-menu-container {
+    position: absolute;
+    z-index: 400;
+    border-radius:5px;
+    padding: 8px;
+    background-color: #011e41;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog-panel {
+    width:100%;
+}
+
+.dialog {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background-color: #fff;
+    padding: 16px;
+    box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+}
+
+.actions-container {
+    display: flex;
+    gap: 8px;
+}
+
+.action-button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+        background-color: #003399;
+        
+    }
+}

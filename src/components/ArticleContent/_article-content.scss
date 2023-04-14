@@ -1,0 +1,45 @@
+@use "src/styles/base/media-break" as media;
+
+.slug-image-container {
+    display: flex;
+    justify-content: center;
+    img {
+        object-fit: cover;
+        width: 100%;
+        @media (min-width: media.$tablet) {
+
+            width: 700px;
+        }
+    }
+}
+
+.slug-content {
+    p {
+        font-size: 16px;
+        line-height: 32px;
+        &::selection {
+            background-color: rgba($color: #002366, $alpha: 0.8);
+            color: #ffffff;
+        }
+    }
+}
+
+.read-more-section {
+    float: right;
+    a {
+    display: flex;
+    align-items: center;
+    gap:16px;
+    padding:16px;
+    border: 1px solid #002366;
+    color: #002366;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+        background-color: #002366;
+        color: #ffffff;
+        transform: scale(1.1);
+    }
+}
+}

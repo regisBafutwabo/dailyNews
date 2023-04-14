@@ -1,0 +1,103 @@
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #dadada;
+    overflow-y: auto;
+    ::webkit-scrollbar {
+        display: none;
+    }
+}
+
+.comment {
+    max-width: 100%;
+    min-height: 100px;
+    flex-direction: column;
+}
+
+.notes-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    position: sticky;
+    top:0;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+}
+
+.notes-header .close-button{
+        position: absolute;
+        right: 20px;
+        border: none;
+        background-color: transparent;
+        font-size: 24px;
+        cursor: pointer;
+        padding:0;
+        &:hover {
+            transform: scale(1.1);
+        }
+        &:focus {
+            transform: scale(0.9);
+        }
+    }
+
+.notes-input-section {
+    padding: 16px 16px;
+}
+
+.textarea-section {
+    textarea{
+        height: 150px;
+        font-size: 14px;
+        width: stretch;
+        border-radius: 5px;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+        padding: 8px;
+        font-family: var(--red-hat-display);
+        &:focus {
+            outline: none;
+        }
+    }
+    &:focus {
+        outline: 1px solid blue;
+    }
+}
+
+.comment-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+    margin: 8px 0px;
+
+    button {
+        background-color: #002366;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 8px;
+        &:hover {
+            background-color: #003399;
+        }
+    }
+    .cancel {
+        background-color: #888;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        &:hover {
+            background-color: #ccc;
+        }
+    }
+}
+
+.saved-notes-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 16px;
+}

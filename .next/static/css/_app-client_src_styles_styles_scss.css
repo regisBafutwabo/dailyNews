@@ -1,0 +1,515 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[14].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[14].use[5]!./src/styles/styles.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.main {
+  display: flex;
+  max-width: 1024px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 32px 8px 32px 8px;
+}
+@media (min-width: 768px) {
+  .main {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.action-menu-container {
+  position: absolute;
+  z-index: 400;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: #011e41;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog-panel {
+  width: 100%;
+}
+
+.dialog {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  padding: 16px;
+  box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+}
+
+.actions-container {
+  display: flex;
+  gap: 8px;
+}
+
+.action-button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.action-button:hover {
+  background-color: #003399;
+}
+
+.articles-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+  padding: 4px;
+}
+
+.article {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid #002366;
+  gap: 16px;
+  font-size: 14px;
+}
+.article:last-child {
+  border-bottom: none;
+}
+@media (min-width: 768px) {
+  .article {
+    flex-direction: row;
+    font-size: 16px;
+    justify-content: space-between;
+  }
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+}
+
+.card-content {
+  margin: 0px 16px;
+}
+@media (min-width: 768px) {
+  .card-content {
+    margin: 0px 0px 16px 8px;
+  }
+}
+
+.date {
+  font-size: 14px;
+  color: #717171;
+}
+
+.article-title a {
+  color: #011e41;
+  text-decoration: none;
+}
+.article-title a:hover {
+  text-decoration: underline;
+}
+
+.article-content p {
+  font-size: 14px;
+}
+.article-content p::selection {
+  background-color: rgba(0, 35, 102, 0.8);
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .article-content p {
+    font-size: 16px;
+  }
+}
+
+.card-image {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 16px 16px;
+}
+.card-image img {
+  object-fit: cover;
+  border-radius: 5px;
+  width: 310px;
+  height: 200px;
+}
+@media (min-width: 425px) {
+  .card-image img {
+    width: 400px;
+    height: 200px;
+  }
+}
+@media (min-width: 768px) {
+  .card-image {
+    margin-right: 16px;
+  }
+  .card-image img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.slug-image-container {
+  display: flex;
+  justify-content: center;
+}
+.slug-image-container img {
+  object-fit: cover;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .slug-image-container img {
+    width: 700px;
+  }
+}
+
+.slug-content p {
+  font-size: 16px;
+  line-height: 32px;
+}
+.slug-content p::selection {
+  background-color: rgba(0, 35, 102, 0.8);
+  color: #ffffff;
+}
+
+.read-more-section {
+  float: right;
+}
+.read-more-section a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #002366;
+  color: #002366;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.read-more-section a:hover {
+  background-color: #002366;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.loading-container {
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  line-height: 28px;
+}
+
+.loading-container .dot {
+  border-radius: 9999px;
+  height: 8px;
+  width: 8px;
+  background-color: currentColor;
+  animation-name: blink;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  margin: 0 2px;
+}
+
+.loading-container .dot:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-container .dot::nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+.nav {
+  padding: 16px;
+  z-index: 3;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 0px 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav span {
+  font-weight: 700;
+}
+.nav a {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  text-decoration: none;
+  color: #002366;
+}
+.nav div {
+  cursor: pointer;
+}
+
+.iframe-container {
+  z-index: 50;
+  bottom: 48px;
+  position: absolute;
+  border: 1px solid #002366;
+  border-radius: 5px;
+}
+.iframe-container iframe {
+  border: 0;
+  height: 500px;
+  width: 400px;
+}
+
+.iframe-container .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #002366;
+  padding: 0px 16px;
+  border-bottom: 2px solid #002366;
+}
+.iframe-container .header span {
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  font-size: 24px;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  -webkit-text-decoration: dashed;
+          text-decoration: dashed;
+  -webkit-text-decoration-color: green;
+          text-decoration-color: green;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  background: #002366;
+  opacity: 0.9;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1;
+  transition: all 1s ease;
+}
+
+.tooltip-container.highlighted {
+  animation-name: highlight;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes highlight {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+.saved-note-card {
+  text-decoration: none;
+  color: #002366;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+  margin: 8px;
+}
+.saved-note-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+}
+
+.card-buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-buttons-wrapper button {
+  color: #002366;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #002366;
+  padding: 4px;
+}
+
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #dadada;
+  overflow-y: auto;
+}
+.notes-container ::webkit-scrollbar {
+  display: none;
+}
+
+.comment {
+  max-width: 100%;
+  min-height: 100px;
+  flex-direction: column;
+}
+
+.notes-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+}
+
+.notes-header .close-button {
+  position: absolute;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+}
+.notes-header .close-button:hover {
+  transform: scale(1.1);
+}
+.notes-header .close-button:focus {
+  transform: scale(0.9);
+}
+
+.notes-input-section {
+  padding: 16px 16px;
+}
+
+.textarea-section textarea {
+  height: 150px;
+  font-size: 14px;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+  padding: 8px;
+  font-family: var(--red-hat-display);
+}
+.textarea-section textarea:focus {
+  outline: none;
+}
+.textarea-section:focus {
+  outline: 1px solid blue;
+}
+
+.comment-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 8px 0px;
+}
+.comment-buttons button {
+  background-color: #002366;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 8px;
+}
+.comment-buttons button:hover {
+  background-color: #003399;
+}
+.comment-buttons .cancel {
+  background-color: #888;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.comment-buttons .cancel:hover {
+  background-color: #ccc;
+}
+
+.saved-notes-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0px !important;
+  color: #011e41;
+  box-sizing: border-box;
+  overflow: auto !important;
+}
+
+.slug-container {
+  margin: 16px 8px;
+}
+@media (min-width: 768px) {
+  .slug-container {
+    margin: 32px 32px;
+  }
+}
+
+.slug-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 4px;
+  margin: 0px 0px 16px;
+}
+.slug-header .author {
+  font-size: 16px;
+}
+.slug-header .date {
+  font-size: 14px;
+  color: #717171;
+}
+
+.slug-sections {
+  display: flex;
+  flex-direction: row;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.with-space {
+  margin: 64px 0px;
+}

@@ -1,0 +1,99 @@
+@use "src/styles/base/media-break" as media;
+
+.articles-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+  padding: 4px;
+}
+
+.article {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid #002366;
+  gap: 16px;
+  font-size: 14px;
+  &:last-child {
+    border-bottom: none;
+  }
+  @media (min-width: media.$tablet) {
+    flex-direction: row;
+    font-size: 16px;
+    justify-content: space-between;
+  }
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+}
+
+.card-content {
+    margin: 0px 16px;
+    @media (min-width: media.$tablet) {
+        margin: 0px 0px 16px 8px;
+    }
+}
+
+.date {
+    font-size: 14px;
+    color: #717171;
+}
+
+.article-title {
+    a{
+        color: #011e41;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.article-content {
+    p{
+        font-size: 14px;
+        &::selection {
+            background-color: rgba($color: #002366, $alpha: 0.8);
+            color: #ffffff;
+        }
+        @media (min-width: media.$tablet) {
+            font-size: 16px;
+        }
+    }
+}
+
+.card-image {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 16px 16px;
+    img {
+        object-fit: cover;
+        border-radius: 5px;
+        width: 310px;
+        height: 200px;
+    }
+    
+    @media (min-width: media.$mobileL) {
+        img {
+            width: 400px;
+            height: 200px;
+        }
+    }
+    @media (min-width: media.$tablet) {
+        margin-right: 16px;
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+}

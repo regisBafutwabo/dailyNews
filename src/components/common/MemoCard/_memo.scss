@@ -1,0 +1,27 @@
+.saved-note-card {
+    text-decoration: none;
+    color: #002366;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    margin: 8px;
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+    }
+}
+
+.card-buttons-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    button {
+        color: #002366;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid #002366;
+        padding: 4px;
+    }
+}

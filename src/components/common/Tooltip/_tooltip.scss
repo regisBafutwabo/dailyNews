@@ -1,0 +1,35 @@
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    text-decoration: dashed;
+    text-decoration-color: green;
+    text-decoration-line: underline;
+}
+
+.tooltip-text  {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    background: #002366;
+    opacity: 0.9;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 1s ease; 
+}
+
+.tooltip-container.highlighted {
+  animation-name: highlight;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes highlight {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: yellow;
+  }
+}

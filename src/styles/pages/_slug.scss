@@ -1,0 +1,39 @@
+@use "src/styles/base/media-break" as media;
+
+.slug-container{
+    margin: 16px 8px;
+    @media (min-width: media.$tablet) {
+        margin: 32px 32px;
+    }
+}
+
+.slug-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+    margin: 0px 0px 16px;
+    .author {
+        font-size: 16px;
+        
+    }
+    .date {
+        font-size: 14px;
+        color: #717171;
+    }
+}
+
+.slug-sections {
+    display: flex;
+    flex-direction: row;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.with-space {
+    margin: 64px 0px;
+}
