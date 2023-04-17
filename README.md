@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Daily News
+
+Nextjs Project using the new ``app`` directory of Nextjs v13.
+
+For more details on the new nextjs ``app`` directory: [Nextjs app dir](https://beta.nextjs.org/docs/getting-started)
 
 ## Getting Started
 
