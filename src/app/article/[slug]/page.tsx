@@ -1,9 +1,5 @@
-import { notFound } from 'next/navigation';
-
-import { ArticleContent } from '@components/ArticleContent';
-import { NotesView } from '@components/NotesView';
-import { ArticleType } from '@typings/article';
 import { Content } from '@components/Content';
+import { ArticleType } from '@typings/article';
 
 export default async function Article({
 	params,
@@ -17,9 +13,9 @@ export default async function Article({
 		(article: ArticleType) => article.id === params.slug
 	);
 
-	if (!currentArticle) {
-		notFound();
-	}
+	// if (!currentArticle) {
+	// 	notFound();
+	// }
 
 	return <Content currentArticle={currentArticle} articleId={params.slug} />;
 }
