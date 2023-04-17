@@ -1,5 +1,8 @@
 'use client';
-import { useEffect, useState } from 'react';
+import {
+  useEffect,
+  useState,
+} from 'react';
 
 import { ArticleContent } from '@components/ArticleContent';
 import { NotesView } from '@components/NotesView';
@@ -28,20 +31,20 @@ export const Content = ({ currentArticle, articleId }: ContentProps) => {
 				<div className="slug-sections">
 					<article className="slug-container">
 						<header className="slug-header">
-							<div className="author">{currentArticle.author}</div>
-							<div className="date">{currentArticle.date}</div>
+							<div className="author">{currentArticle?.author}</div>
+							<div className="date">{currentArticle?.date}</div>
 						</header>
 
-						<ArticleContent
+						{currentArticle && <ArticleContent
 							currentArticle={currentArticle}
 							selectedId={selectedMemo}
-						/>
+						/>}
 					</article>
-					<NotesView
+					{currentArticle && <NotesView
 						articleId={articleId}
 						title={currentArticle.title}
 						onMemoClick={onMemoClick}
-					/>
+					/>}
 				</div>
 			)}
 		</>
