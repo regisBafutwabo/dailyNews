@@ -10,7 +10,6 @@ import { ActionMenu } from '@components/ActionMenu';
 import { TextHighlighter } from '@components/common/TextHighlighter';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useSidebarStore } from '@store/Sidebar';
 import { useUserStore } from '@store/User';
 
 import { ArticleContentProps } from './ArticleContent.types';
@@ -19,12 +18,7 @@ export const ArticleContent = ({
 	currentArticle,
 	selectedId,
 }: ArticleContentProps) => {
-	const { closeSidebar, selection, articleId, articleTitle } =
-		useSidebarStore();
-	const { addMemo, memos: memoList } = useUserStore();
-
-	const [comment, setComment] = useState<string>('');
-	const [loading, setLoading] = useState(false);
+	const { memos: memoList } = useUserStore();
 
 	const [showActionMenu, setShowActionMenu] = useState(false);
 	const [mousePosition, setMousePosition] = useState({ left: 0, top: 0 });

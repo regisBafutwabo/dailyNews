@@ -12,7 +12,7 @@
 import { Articles } from '@components/Articles';
 
 export default async function Home() {
-	const data = await fetch("https://inshorts.deta.dev/news?category=world");
+	const data = await fetch("http://localhost:3000/api/articles");
 	const articles = await data.json();
 
 	return (

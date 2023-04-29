@@ -1,7 +1,10 @@
 import { useState } from 'react';
 
 import { Dictionnary } from '@components/common/Dictionnary';
-import { faComment, faSearch } from '@fortawesome/free-solid-svg-icons';
+import {
+  faComment,
+  faSearch,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useSidebarStore } from '@store/Sidebar';
 
@@ -13,7 +16,6 @@ export const ActionMenu = (props: ActionMenuProps) => {
 	const { openSidebar } = useSidebarStore();
 	const [openSearch, setOpenSearch] = useState(false);
 	const [selectedText, setselectedText] = useState('');
-	// const selectionRef = useRef<Selection | null>(null);
 
 	const onCommentClick = () => {
 		const selection = window.getSelection();
