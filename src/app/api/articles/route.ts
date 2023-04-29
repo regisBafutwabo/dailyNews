@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-export async function GET() {
+export async function getArticles() {
   const data = await fetch('https://inshorts.deta.dev/news?category=world', {
     next: { revalidate: 3600 } // Revalidate every 60 seconds
   });

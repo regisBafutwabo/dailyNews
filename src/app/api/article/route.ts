@@ -2,9 +2,7 @@ import { NextResponse } from 'next/server';
 
 import { ArticleType } from '@typings/article';
 
-export async function GET(request: Request) {
-  const {searchParams, } = new URL(request.url)
-  const slug = searchParams.get("slug");
+export async function getArticle(slug:string) {
 
   const data = await fetch('https://inshorts.deta.dev/news?category=world');
 	const articles = await data.json();

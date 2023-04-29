@@ -11,8 +11,11 @@
 
 import { Articles } from '@components/Articles';
 
+import { getArticles } from './api/articles/route';
+
 export default async function Home() {
-	const data = await fetch(`${process.env.API_URL}/api/articles`);
+	
+	const data = await getArticles();
 	const articles = await data.json();
 
 	return (
