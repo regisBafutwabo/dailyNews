@@ -12,7 +12,7 @@
 import { Articles } from '@components/Articles';
 
 export default async function Home() {
-	const data = await fetch("http://localhost:3000/api/articles");
+	const data = await fetch(`${process.env.API_URL}/api/articles`);
 	const articles = await data.json();
 
 	return (

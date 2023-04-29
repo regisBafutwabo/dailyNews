@@ -29,7 +29,7 @@ export default async function Article({
 }: {
 	params: { slug: string };
 }) {
-	const data = await fetch(`http://localhost:3000/api/article?slug=${params.slug}`)
+	const data = await fetch(`${process.env.API_URL}/api/article?slug=${params.slug}`)
 
 	const currentArticle = await data.json();
 	if (!currentArticle) {
